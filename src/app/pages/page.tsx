@@ -2,7 +2,6 @@
 
 import { useSearchParams } from "next/navigation"
 import Image from 'next/image'
-import MapComponent from './MapComponent';
 import React, { useEffect } from "react";
 
 
@@ -149,8 +148,8 @@ export default function Detail() {
               </div>
 
               {RoomList.map((item) => (
-                <div>
-                  <div className="flex justify-between w-full">
+                <div key={item.price}>
+                  <div  className="flex justify-between w-full">
                     <div className=" w-40">
                       <p>{item.roomname}</p>
                       <p className="text-orange-300">
