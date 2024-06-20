@@ -2,26 +2,214 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.content {
+    padding: 20px;
+    font-size: 40px;
+    font-family: 'Courgette', cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+header {
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Rock Salt', cursive;
+    padding-top: 15px;
+
+}
+
+.header-left {
+    float: left;
+    padding-left: 50px;
+}
+
+.header-right {
+    padding-top: 15px;
+    float: right;
+}
+
+.header-right a {
+    float: left;
+    line-height: 65px;
+    padding: 0 30px;
+    color: #fff;
+    display: block;
+}
+
+
+.heading h1 {
+    font-family: 'Cinzel', serif;
+}
+
+.top-wrapper {
+    padding: 180px 0 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.image {
+    background-image: url(resort.jpg);
+    background-size: cover;
+    height: 720px;
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.top-wrapper.overlay:before {
+    background: rgba(0, 0, 0, 0.45);
+    content: "";
+    position: absolute;
+    height: 100vh;
+    min-height: 720px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.top-wrapper h1 {
+    opacity: 0.9;
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.top-wrapper p {
+    opacity: 0.9;
+    margin-bottom: 3px;
+}
+
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+
+}
+
+.btn.uppercase {
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: .2em;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #f57c30;
+    border-color: #f57c30;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #eb620d;
+    border-color: #eb620d;
+}
+
+.btn-primary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(230, 28, 93, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(230, 28, 93, 0.5);
+}
+
+
+.btn-outline-light {
+    color: #f8f9fa;
+    background-color: transparent;
+    border-color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+
+/* HOTEL CARD CSS */
+
+.main-container {
+    margin: 15px;
+}
+
+.hotel-card {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.hotel-image {
+    width: 500px;
+    height: 240px;
+    border-radius: 16px 0 0 16px;
+    object-fit: cover;
+    overflow: hidden;
+
+    /* background-image: url("https://d2g4iwshf24scx.cloudfront.net//Tour-Images//false-41502//Qasr%20al%20watan%20front-image.jpg"); */
+}
+
+.hotel-content {
+    flex-direction: column;
+    padding: 15px;
+}
+
+.hotel-name {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+}
+
+.hotel-address {
+    font-family: 'Rock Salt';
+    font-size: 20px;
+}
+
+.informationbox {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    padding: 20px;
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.location {
+    background-image: url(pin.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+}
+
+.policy {
+    background-image: url(padlock.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+   
+
 }
